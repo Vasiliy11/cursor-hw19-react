@@ -1,0 +1,117 @@
+.modal {
+  width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  background-color: #000;
+  color: #fff;
+
+  h2 {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-weight: 400;
+  }
+}
+
+.img-wrapper {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f48fb2;
+  margin: 30px auto 0;
+  position: relative;
+  img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+form {
+  div {
+    display: flex;
+    justify-content: space-between;
+  }
+  input {
+    height: 40px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: transparent;
+    color: #fff;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  input[type='text'] {
+    width: 48%;
+  }
+  input[type='email'],
+  input[type='password'] {
+    width: 100%;
+  }
+  .checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    // margin: 10px 0 0 20px;
+  }
+  .checkbox + label {
+    position: relative;
+    padding: 0 0 0 25px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    text-align: left;
+  }
+  .checkbox + label:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background: #000000;
+    border-radius: 2px;
+    border: 1px solid gray;
+  }
+  .checkbox:checked + label:before {
+    background: #27088c;
+    border-color: #27088c;
+  }
+}
+.form-btn {
+  background: #90caf9;
+  width: 100%;
+  margin-top: 30px;
+  height: 32px;
+  &:hover {
+    background: #199db1;
+  }
+}
+.toggle-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.toggle-btn {
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  color: #215f9d;
+  font-size: 10px;
+  cursor: pointer;
+  outline: transparent;
+  &:last-child {
+    margin-left: auto;
+  }
+  &:hover {
+    color: #3485d6;
+  }
+}
+.copyright {
+  margin-top: 30px;
+  font-size: 12px;
+  color: gray;
+}
