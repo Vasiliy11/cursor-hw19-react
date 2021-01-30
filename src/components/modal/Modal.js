@@ -15,16 +15,22 @@ class Modal extends Component {
       lname: '',
       password: '',
       email: '',
-      isChecked: false,
+      isChecked: false
     };
   }
   inputHandler = (e) => {
+    const regname = /...+/;
+    const regmail = /...+@..+\...+/;
+    const regpass = /(?=.*[a-z])(?=.*[A-Z])........+/;
     const target = e.target;
     const value = target.type === 'checkbox' ? target.checked : target.value;
     const name = target.name;
-    this.setState({
-      [name]: value,
-    });
+    (regname.test(value) && (name === 'fname' || name === 'lname')) ||
+    (regmail.test(value) && name === 'email') ||
+    (regpass.test(value) && name === 'password')
+      ? (target.className = 'green')
+      : (target.className = 'red');
+    this.setState({ [name]: value });
   };
   saveDataHandler = () => {
     const { fname, lname, email, password } = this.state;
