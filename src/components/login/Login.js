@@ -1,5 +1,6 @@
 import React from 'react';
 import '../modal/modal.scss';
+import { FormButton } from '../modal/ModalStyledComponent'
 
 const Login = (props) => {
   return (
@@ -27,7 +28,7 @@ const Login = (props) => {
           onChange={props.inputHandler}
         />
         <label htmlFor="checkbox">Remember me</label>
-        <input type="submit" className="form-btn" value="Sign in" />
+        <FormButton type="submit" value="Sign in" />
       </form>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../modal/modal.scss';
+import { FormButton } from '../modal/ModalStyledComponent'
 
 const Register = (props) => {
   return (
@@ -46,7 +47,7 @@ const Register = (props) => {
           I want to receive inspiration, marketing promotions and updates via
           emeil
         </label>
-        <input type="submit" className="form-btn" value="Sign up" />
+        <FormButton type="submit" value="Sign up" />
       </form>
     </div>
   );

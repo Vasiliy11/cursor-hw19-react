@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './modal.scss';
-
+import {ButtonStyled, DivModal, DivImg, Img }  from './ModalStyledComponent'
 import Login from '../login/Login';
 import Register from '../register/Register';
 import lock from '../../lock.svg';
@@ -53,10 +53,10 @@ class Modal extends Component {
   render() {
     const { value } = this.state;
     return (
-      <div className="modal">
-        <div className="img-wrapper">
-          <img src={lock} alt="lock" />
-        </div>
+      <DivModal className="modal">
+        <DivImg>
+          <Img src={lock} alt="lock" />
+        </DivImg>
         <h2>{value}</h2>
         {value === 'Sign up' ? (
           <Register
@@ -68,14 +68,14 @@ class Modal extends Component {
         )}
         <div className="toggle-wrapper">
           {value === 'Sign in' ? (
-            <button className="toggle-btn">Forgot password?</button>
+            <ButtonStyled>Forgot password?</ButtonStyled>
           ) : null}
-          <button onClick={this.handleToggleValue} className="toggle-btn">
+          <ButtonStyled onClick={this.handleToggleValue}>
             {this.state.toggleValue}
-          </button>
+          </ButtonStyled>
         </div>
         <p className="copyright">Copyright &copy; Your Website 2021</p>
-      </div>
+      </DivModal>
     );
   }
 }

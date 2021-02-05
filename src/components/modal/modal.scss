@@ -1,9 +1,4 @@
 .modal {
-  width: 400px;
-  margin: 100px auto;
-  padding: 30px;
-  background-color: #000;
-  color: #fff;
 
   h2 {
     margin-top: 5px;
@@ -12,22 +7,6 @@
   }
 }
 
-.img-wrapper {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #f48fb2;
-  margin: 30px auto 0;
-  position: relative;
-  img {
-    width: 24px;
-    height: 24px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
 form {
   div {
     display: flex;
@@ -81,35 +60,13 @@ form {
     border-color: #27088c;
   }
 }
-.form-btn {
-  background: #90caf9;
-  width: 100%;
-  margin-top: 30px;
-  height: 32px;
-  &:hover {
-    background: #199db1;
-  }
-}
+
 .toggle-wrapper {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
 }
-.toggle-btn {
-  border: none;
-  background: transparent;
-  text-decoration: underline;
-  color: #215f9d;
-  font-size: 10px;
-  cursor: pointer;
-  outline: transparent;
-  &:last-child {
-    margin-left: auto;
-  }
-  &:hover {
-    color: #3485d6;
-  }
-}
+
 .copyright {
   margin-top: 30px;
   font-size: 12px;
