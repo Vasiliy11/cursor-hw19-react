@@ -13,6 +13,7 @@ const Register = (props) => {
             name="fname"
             value={props.name}
             onChange={props.inputHandler}
+            required={true}
           />
           <input
             type="text"
@@ -20,6 +21,7 @@ const Register = (props) => {
             name="lname"
             value={props.surname}
             onChange={props.inputHandler}
+            required={true}
           />
         </div>
         <input
@@ -28,6 +30,7 @@ const Register = (props) => {
           name="email"
           value={props.email}
           onChange={props.inputHandler}
+          required={true}
         />
         <input
           type="password"
@@ -35,6 +38,7 @@ const Register = (props) => {
           name="password"
           value={props.password}
           onChange={props.inputHandler}
+          required={true}
         />
         <input
           type="checkbox"
